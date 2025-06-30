@@ -25,7 +25,7 @@ SECRET_KEY = 'django-insecure-q-uy3lsp9g#=hsjk#s87%6l+shhvj6=2q=v*q(o$8mc3(_*p4+
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ["legalaidai.onrender.com"]
 
 
 INSTALLED_APPS = [
@@ -40,9 +40,10 @@ INSTALLED_APPS = [
     'corsheaders',
 ]
 
-CORS_ALLOWED_ORIGINS = [
-    "https://legalaidai-frontend.onrender.com",
+CORS_ALLOWED_ORIGIN_REGEXES = [
+    r"^https://legalaidai-frontend\.onrender\.com$",
 ]
+
 
 CORS_ALLOW_CREDENTIALS = True
 
