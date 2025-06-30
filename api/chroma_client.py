@@ -86,6 +86,7 @@ def get_llm_context(query,username,filenames):
 
         return {"context": relavent_docs}
 
+if __name__ == "__main__":
+    process_pdf("./api/data_files/constitution.pdf", "constitution.pdf", "Contitution_Collection", "ADMIN")
 
-process_pdf("./api/data_files/constitution.pdf","constitution.pdf", "Contitution_Collection", "ADMIN")
 
