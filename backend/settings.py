@@ -44,6 +44,11 @@ CORS_ALLOWED_ORIGIN_REGEXES = [
     r"^https://legalaidai-frontend\.onrender\.com$",
 ]
 
+CORS_ALLOWED_ORIGINS = [
+    "https://legalaidai-frontend.onrender.com",
+]
+
+
 
 CORS_ALLOW_CREDENTIALS = True
 
@@ -51,7 +56,11 @@ CSRF_TRUSTED_ORIGINS = [
     "https://legalaidai-frontend.onrender.com",
 ]
 
-SESSION_COOKIE_SAMESITE = 'Lax'
+SESSION_COOKIE_SAMESITE = 'None'
+SESSION_COOKIE_SECURE = True  
+CSRF_COOKIE_SAMESITE = 'None'
+CSRF_COOKIE_SECURE = True
+
 CSRF_COOKIE_SAMESITE = 'Lax'
 
 
@@ -139,6 +148,9 @@ STATIC_URL = 'static/'
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
+
+SESSION_ENGINE = "django.contrib.sessions.backends.db" 
+SESSION_COOKIE_HTTPONLY = True
 
 
 from dotenv import load_dotenv
