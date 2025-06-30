@@ -41,13 +41,13 @@ INSTALLED_APPS = [
 ]
 
 CORS_ALLOWED_ORIGINS = [
-    "http://localhost:3000",
+    "https://legalaidai-frontend.onrender.com",
 ]
 
 CORS_ALLOW_CREDENTIALS = True
 
 CSRF_TRUSTED_ORIGINS = [
-    "http://localhost:3000",
+    "https://legalaidai-frontend.onrender.com",
 ]
 
 SESSION_COOKIE_SAMESITE = 'Lax'
