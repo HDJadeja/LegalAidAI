@@ -143,13 +143,10 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 from dotenv import load_dotenv
 from pathlib import Path
 import os
+load_dotenv("/etc/secrets/.env")
 
-env_path = Path(__file__).parent.parent / "api" / ".env"
-load_dotenv(dotenv_path=env_path)
 
 API_KEY = os.getenv('API_KEY')
 API_URL = os.getenv('API_URL')
 MODEL = os.getenv('MODEL')
 
-
-print(API_KEY, API_URL, MODEL )
